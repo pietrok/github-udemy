@@ -1,0 +1,23 @@
+2025-02-19T16:17:44.709-0800 [DEBUG] Adding temp file log sink: /var/folders/db/fwywb2r936lgdxbcbx0nbq140000gq/T/terraform-log550201746
+2025-02-19T16:17:44.710-0800 [INFO]  Terraform version: 1.0.7
+2025-02-19T16:17:44.710-0800 [INFO]  Go runtime version: go1.16.4
+2025-02-19T16:17:44.710-0800 [INFO]  CLI args: []string{"/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.0.7/terraform", "fmt", "--recursive"}
+2025-02-19T16:17:44.710-0800 [TRACE] Stdout is a terminal of width 248
+2025-02-19T16:17:44.710-0800 [TRACE] Stderr is a terminal of width 248
+2025-02-19T16:17:44.710-0800 [TRACE] Stdin is a terminal
+2025-02-19T16:17:44.710-0800 [DEBUG] Attempting to open CLI config file: /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-19T16:17:44.710-0800 [INFO]  Loading CLI configuration from /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-19T16:17:44.711-0800 [DEBUG] checking for credentials in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-19T16:17:44.711-0800 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-02-19T16:17:44.711-0800 [DEBUG] will search for provider plugins in /Users/piet.heijdeman@avalara.com/.terraform.d/plugins
+2025-02-19T16:17:44.712-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-19T16:17:44.712-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-19T16:17:44.712-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-19T16:17:44.713-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-19T16:17:44.713-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64/terraform-provider-aws_v4.10.0_x5" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-19T16:17:44.714-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/template v2.2.0 for darwin_arm64 at /Users/piet.heijdeman@avalara.com/.terraform.d/plugins/registry.terraform.io/hashicorp/template/2.2.0/darwin_arm64
+2025-02-19T16:17:44.714-0800 [DEBUG] ignoring non-existing provider search directory /Users/piet.heijdeman@avalara.com/Library/Application Support/io.terraform/plugins
+2025-02-19T16:17:44.714-0800 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-02-19T16:17:44.714-0800 [INFO]  CLI command args: []string{"fmt", "--recursive"}
+2025-02-19T16:17:44.714-0800 [TRACE] terraform fmt: looking for files in .
+2025-02-19T16:17:44.714-0800 [TRACE] terraform fmt: Formatting server.tf

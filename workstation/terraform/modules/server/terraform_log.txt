@@ -1,0 +1,209 @@
+2025-02-21T15:01:21.685-0800 [INFO]  Terraform version: 1.3.9
+2025-02-21T15:01:21.685-0800 [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2025-02-21T15:01:21.685-0800 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.0
+2025-02-21T15:01:21.685-0800 [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2025-02-21T15:01:21.685-0800 [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2025-02-21T15:01:21.685-0800 [DEBUG] using github.com/zclconf/go-cty v1.12.1
+2025-02-21T15:01:21.685-0800 [INFO]  Go runtime version: go1.19.6
+2025-02-21T15:01:21.685-0800 [INFO]  CLI args: []string{"/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9/terraform", "plan"}
+2025-02-21T15:01:21.685-0800 [TRACE] Stdout is a terminal of width 142
+2025-02-21T15:01:21.685-0800 [TRACE] Stderr is a terminal of width 142
+2025-02-21T15:01:21.685-0800 [TRACE] Stdin is a terminal
+2025-02-21T15:01:21.686-0800 [DEBUG] Attempting to open CLI config file: /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:01:21.686-0800 [INFO]  Loading CLI configuration from /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:01:21.687-0800 [DEBUG] checking for credentials in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:01:21.687-0800 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-02-21T15:01:21.687-0800 [DEBUG] will search for provider plugins in /Users/piet.heijdeman@avalara.com/.terraform.d/plugins
+2025-02-21T15:01:21.688-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:01:21.688-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:01:21.688-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:01:21.688-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:01:21.688-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64/terraform-provider-aws_v4.10.0_x5" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:01:21.690-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/template v2.2.0 for darwin_arm64 at /Users/piet.heijdeman@avalara.com/.terraform.d/plugins/registry.terraform.io/hashicorp/template/2.2.0/darwin_arm64
+2025-02-21T15:01:21.690-0800 [DEBUG] ignoring non-existing provider search directory /Users/piet.heijdeman@avalara.com/Library/Application Support/io.terraform/plugins
+2025-02-21T15:01:21.690-0800 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-02-21T15:01:21.691-0800 [INFO]  CLI command args: []string{"plan"}
+2025-02-21T15:01:21.702-0800 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2025-02-21T15:01:21.702-0800 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2025-02-21T15:01:21.702-0800 [DEBUG] New state was assigned lineage "bccd8ae8-503e-2671-4307-0b36c5026fed"
+2025-02-21T15:01:21.702-0800 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2025-02-21T15:01:21.702-0800 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2025-02-21T15:01:21.703-0800 [DEBUG] checking for provisioner in "."
+2025-02-21T15:01:21.703-0800 [DEBUG] checking for provisioner in "/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9"
+2025-02-21T15:01:21.703-0800 [DEBUG] checking for provisioner in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:01:21.703-0800 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2025-02-21T15:01:21.705-0800 [INFO]  backend/local: starting Plan operation
+2025-02-21T15:01:21.705-0800 [TRACE] backend/local: requesting state manager for workspace "default"
+2025-02-21T15:01:21.707-0800 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2025-02-21T15:01:21.707-0800 [TRACE] backend/local: requesting state lock for workspace "default"
+2025-02-21T15:01:21.709-0800 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2025-02-21T15:01:21.710-0800 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2025-02-21T15:01:21.710-0800 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2025-02-21T15:01:21.710-0800 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2025-02-21T15:01:21.710-0800 [TRACE] backend/local: reading remote state for workspace "default"
+2025-02-21T15:01:21.710-0800 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2025-02-21T15:01:21.710-0800 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2025-02-21T15:01:21.710-0800 [TRACE] statemgr.Filesystem: read nil snapshot
+2025-02-21T15:01:21.710-0800 [TRACE] backend/local: populating backend.LocalRun for current working directory
+2025-02-21T15:01:21.712-0800 [TRACE] Config.VerifyDependencySelections: provider registry.terraform.io/hashicorp/aws has no lock file entry to satisfy ""
+2025-02-21T15:01:21.712-0800 [DEBUG] backend/local: will prompt for input of unset required variables [ami subnet_id security_groups]
+2025-02-21T15:01:21.712-0800 [DEBUG] command: asking for input: "var.ami"
+2025-02-21T15:01:25.047-0800 [WARN]  backend/local: Failed to request user input for variable "ami": interrupted
+2025-02-21T15:01:25.047-0800 [WARN]  backend/local: Failed to request user input for variable "security_groups": interrupted
+2025-02-21T15:01:25.047-0800 [WARN]  backend/local: Failed to request user input for variable "subnet_id": interrupted
+2025-02-21T15:01:25.047-0800 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2025-02-21T15:01:25.048-0800 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2025-02-21T15:02:04.519-0800 [INFO]  Terraform version: 1.3.9
+2025-02-21T15:02:04.521-0800 [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2025-02-21T15:02:04.521-0800 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.0
+2025-02-21T15:02:04.521-0800 [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2025-02-21T15:02:04.521-0800 [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2025-02-21T15:02:04.521-0800 [DEBUG] using github.com/zclconf/go-cty v1.12.1
+2025-02-21T15:02:04.521-0800 [INFO]  Go runtime version: go1.19.6
+2025-02-21T15:02:04.521-0800 [INFO]  CLI args: []string{"/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9/terraform", "validate"}
+2025-02-21T15:02:04.521-0800 [TRACE] Stdout is a terminal of width 142
+2025-02-21T15:02:04.521-0800 [TRACE] Stderr is a terminal of width 142
+2025-02-21T15:02:04.521-0800 [TRACE] Stdin is a terminal
+2025-02-21T15:02:04.521-0800 [DEBUG] Attempting to open CLI config file: /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:02:04.522-0800 [INFO]  Loading CLI configuration from /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:02:04.523-0800 [DEBUG] checking for credentials in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:02:04.523-0800 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-02-21T15:02:04.523-0800 [DEBUG] will search for provider plugins in /Users/piet.heijdeman@avalara.com/.terraform.d/plugins
+2025-02-21T15:02:04.530-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:04.530-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:04.531-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:04.531-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:04.531-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64/terraform-provider-aws_v4.10.0_x5" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:04.532-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/template v2.2.0 for darwin_arm64 at /Users/piet.heijdeman@avalara.com/.terraform.d/plugins/registry.terraform.io/hashicorp/template/2.2.0/darwin_arm64
+2025-02-21T15:02:04.533-0800 [DEBUG] ignoring non-existing provider search directory /Users/piet.heijdeman@avalara.com/Library/Application Support/io.terraform/plugins
+2025-02-21T15:02:04.533-0800 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-02-21T15:02:04.533-0800 [INFO]  CLI command args: []string{"validate"}
+2025-02-21T15:02:04.537-0800 [DEBUG] checking for provisioner in "."
+2025-02-21T15:02:04.538-0800 [DEBUG] checking for provisioner in "/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9"
+2025-02-21T15:02:04.540-0800 [DEBUG] checking for provisioner in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:02:04.540-0800 [TRACE] terraform.NewContext: starting
+2025-02-21T15:02:04.540-0800 [TRACE] terraform.NewContext: complete
+2025-02-21T15:02:08.792-0800 [INFO]  Terraform version: 1.3.9
+2025-02-21T15:02:08.793-0800 [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2025-02-21T15:02:08.793-0800 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.0
+2025-02-21T15:02:08.793-0800 [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2025-02-21T15:02:08.793-0800 [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2025-02-21T15:02:08.793-0800 [DEBUG] using github.com/zclconf/go-cty v1.12.1
+2025-02-21T15:02:08.793-0800 [INFO]  Go runtime version: go1.19.6
+2025-02-21T15:02:08.793-0800 [INFO]  CLI args: []string{"/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9/terraform", "init"}
+2025-02-21T15:02:08.793-0800 [TRACE] Stdout is a terminal of width 142
+2025-02-21T15:02:08.793-0800 [TRACE] Stderr is a terminal of width 142
+2025-02-21T15:02:08.793-0800 [TRACE] Stdin is a terminal
+2025-02-21T15:02:08.793-0800 [DEBUG] Attempting to open CLI config file: /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:02:08.793-0800 [INFO]  Loading CLI configuration from /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:02:08.793-0800 [DEBUG] checking for credentials in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:02:08.793-0800 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-02-21T15:02:08.793-0800 [DEBUG] will search for provider plugins in /Users/piet.heijdeman@avalara.com/.terraform.d/plugins
+2025-02-21T15:02:08.794-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:08.794-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:08.796-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:08.796-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:08.796-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64/terraform-provider-aws_v4.10.0_x5" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:02:08.796-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/template v2.2.0 for darwin_arm64 at /Users/piet.heijdeman@avalara.com/.terraform.d/plugins/registry.terraform.io/hashicorp/template/2.2.0/darwin_arm64
+2025-02-21T15:02:08.797-0800 [DEBUG] ignoring non-existing provider search directory /Users/piet.heijdeman@avalara.com/Library/Application Support/io.terraform/plugins
+2025-02-21T15:02:08.797-0800 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-02-21T15:02:08.797-0800 [INFO]  CLI command args: []string{"init"}
+2025-02-21T15:02:08.808-0800 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2025-02-21T15:02:08.808-0800 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2025-02-21T15:02:08.808-0800 [DEBUG] New state was assigned lineage "092f6917-3344-16bf-b26e-ec977021a8b5"
+2025-02-21T15:02:08.808-0800 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2025-02-21T15:02:08.808-0800 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2025-02-21T15:02:08.808-0800 [DEBUG] checking for provisioner in "."
+2025-02-21T15:02:08.808-0800 [DEBUG] checking for provisioner in "/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9"
+2025-02-21T15:02:08.808-0800 [DEBUG] checking for provisioner in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:02:08.808-0800 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2025-02-21T15:02:08.808-0800 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2025-02-21T15:02:08.808-0800 [TRACE] statemgr.Filesystem: reading initial snapshot from terraform.tfstate
+2025-02-21T15:02:08.808-0800 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2025-02-21T15:02:08.808-0800 [TRACE] statemgr.Filesystem: read nil snapshot
+2025-02-21T15:02:08.809-0800 [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2025-02-21T15:02:08.810-0800 [TRACE] HTTP client GET request to https://registry.terraform.io/.well-known/terraform.json
+2025-02-21T15:02:09.206-0800 [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions
+2025-02-21T15:02:09.206-0800 [TRACE] HTTP client GET request to https://registry.terraform.io/v1/providers/hashicorp/aws/versions
+2025-02-21T15:02:09.492-0800 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2025-02-21T15:02:09.492-0800 [TRACE] getproviders.SearchLocalDirectory: failed to resolve symlinks for .terraform/providers: lstat .terraform: no such file or directory
+2025-02-21T15:02:09.492-0800 [TRACE] providercache.fillMetaCache: error while scanning directory .terraform/providers: cannot search .terraform/providers: lstat .terraform/providers: no such file or directory
+2025-02-21T15:02:09.492-0800 [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/5.88.0/download/darwin/arm64
+2025-02-21T15:02:09.492-0800 [TRACE] HTTP client GET request to https://registry.terraform.io/v1/providers/hashicorp/aws/5.88.0/download/darwin/arm64
+2025-02-21T15:02:09.779-0800 [DEBUG] GET https://releases.hashicorp.com/terraform-provider-aws/5.88.0/terraform-provider-aws_5.88.0_SHA256SUMS
+2025-02-21T15:02:09.779-0800 [TRACE] HTTP client GET request to https://releases.hashicorp.com/terraform-provider-aws/5.88.0/terraform-provider-aws_5.88.0_SHA256SUMS
+2025-02-21T15:02:10.244-0800 [DEBUG] GET https://releases.hashicorp.com/terraform-provider-aws/5.88.0/terraform-provider-aws_5.88.0_SHA256SUMS.72D7468F.sig
+2025-02-21T15:02:10.244-0800 [TRACE] HTTP client GET request to https://releases.hashicorp.com/terraform-provider-aws/5.88.0/terraform-provider-aws_5.88.0_SHA256SUMS.72D7468F.sig
+2025-02-21T15:02:10.341-0800 [TRACE] providercache.Dir.InstallPackage: installing registry.terraform.io/hashicorp/aws v5.88.0 from https://releases.hashicorp.com/terraform-provider-aws/5.88.0/terraform-provider-aws_5.88.0_darwin_arm64.zip
+2025-02-21T15:02:10.341-0800 [TRACE] HTTP client GET request to https://releases.hashicorp.com/terraform-provider-aws/5.88.0/terraform-provider-aws_5.88.0_darwin_arm64.zip
+2025-02-21T15:02:51.291-0800 [DEBUG] Provider signed by 34365D9472D7468F HashiCorp Security (hashicorp.com/security) <security@hashicorp.com>
+2025-02-21T15:02:53.551-0800 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2025-02-21T15:02:53.565-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v5.88.0 for darwin_arm64 at .terraform/providers/registry.terraform.io/hashicorp/aws/5.88.0/darwin_arm64
+2025-02-21T15:02:53.565-0800 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/5.88.0/darwin_arm64 as a candidate package for registry.terraform.io/hashicorp/aws 5.88.0
+2025-02-21T15:22:57.212-0800 [INFO]  Terraform version: 1.3.9
+2025-02-21T15:22:57.217-0800 [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2025-02-21T15:22:57.217-0800 [DEBUG] using github.com/hashicorp/hcl/v2 v2.16.0
+2025-02-21T15:22:57.217-0800 [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2025-02-21T15:22:57.217-0800 [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2025-02-21T15:22:57.217-0800 [DEBUG] using github.com/zclconf/go-cty v1.12.1
+2025-02-21T15:22:57.217-0800 [INFO]  Go runtime version: go1.19.6
+2025-02-21T15:22:57.217-0800 [INFO]  CLI args: []string{"/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9/terraform", "plan"}
+2025-02-21T15:22:57.217-0800 [TRACE] Stdout is a terminal of width 206
+2025-02-21T15:22:57.217-0800 [TRACE] Stderr is a terminal of width 206
+2025-02-21T15:22:57.217-0800 [TRACE] Stdin is a terminal
+2025-02-21T15:22:57.217-0800 [DEBUG] Attempting to open CLI config file: /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:22:57.217-0800 [INFO]  Loading CLI configuration from /Users/piet.heijdeman@avalara.com/.terraformrc
+2025-02-21T15:22:57.218-0800 [DEBUG] checking for credentials in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:22:57.218-0800 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-02-21T15:22:57.218-0800 [DEBUG] will search for provider plugins in /Users/piet.heijdeman@avalara.com/.terraform.d/plugins
+2025-02-21T15:22:57.219-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:22:57.220-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:22:57.220-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:22:57.221-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:22:57.221-0800 [WARN]  local provider path "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins/darwin_amd64/registry.terraform.io/hashicorp/aws/4.10.0/darwin_amd64/terraform-provider-aws_v4.10.0_x5" contains invalid namespace "registry.terraform.io"; ignoring
+2025-02-21T15:22:57.222-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/template v2.2.0 for darwin_arm64 at /Users/piet.heijdeman@avalara.com/.terraform.d/plugins/registry.terraform.io/hashicorp/template/2.2.0/darwin_arm64
+2025-02-21T15:22:57.222-0800 [DEBUG] ignoring non-existing provider search directory /Users/piet.heijdeman@avalara.com/Library/Application Support/io.terraform/plugins
+2025-02-21T15:22:57.222-0800 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2025-02-21T15:22:57.222-0800 [INFO]  CLI command args: []string{"plan"}
+2025-02-21T15:22:57.226-0800 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2025-02-21T15:22:57.226-0800 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2025-02-21T15:22:57.226-0800 [DEBUG] New state was assigned lineage "bf1bf153-fc38-4076-addd-023e1741bf07"
+2025-02-21T15:22:57.226-0800 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2025-02-21T15:22:57.226-0800 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2025-02-21T15:22:57.227-0800 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2025-02-21T15:22:57.233-0800 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v5.88.0 for darwin_arm64 at .terraform/providers/registry.terraform.io/hashicorp/aws/5.88.0/darwin_arm64
+2025-02-21T15:22:57.233-0800 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/aws/5.88.0/darwin_arm64 as a candidate package for registry.terraform.io/hashicorp/aws 5.88.0
+2025-02-21T15:22:57.714-0800 [DEBUG] checking for provisioner in "."
+2025-02-21T15:22:57.715-0800 [DEBUG] checking for provisioner in "/opt/homebrew/Cellar/tfenv/3.0.0/versions/1.3.9"
+2025-02-21T15:22:57.716-0800 [DEBUG] checking for provisioner in "/Users/piet.heijdeman@avalara.com/.terraform.d/plugins"
+2025-02-21T15:22:57.716-0800 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2025-02-21T15:22:57.717-0800 [INFO]  backend/local: starting Plan operation
+2025-02-21T15:22:57.720-0800 [TRACE] backend/local: requesting state manager for workspace "default"
+2025-02-21T15:22:57.720-0800 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2025-02-21T15:22:57.720-0800 [TRACE] backend/local: requesting state lock for workspace "default"
+2025-02-21T15:22:57.722-0800 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2025-02-21T15:22:57.722-0800 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2025-02-21T15:22:57.722-0800 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2025-02-21T15:22:57.722-0800 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2025-02-21T15:22:57.724-0800 [TRACE] backend/local: reading remote state for workspace "default"
+2025-02-21T15:22:57.724-0800 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2025-02-21T15:22:57.724-0800 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2025-02-21T15:22:57.724-0800 [TRACE] statemgr.Filesystem: read nil snapshot
+2025-02-21T15:22:57.724-0800 [TRACE] backend/local: populating backend.LocalRun for current working directory
+2025-02-21T15:22:57.726-0800 [TRACE] Config.VerifyDependencySelections: provider registry.terraform.io/hashicorp/aws has 5.88.0 to satisfy ""
+2025-02-21T15:22:57.726-0800 [DEBUG] backend/local: will prompt for input of unset required variables [subnet_id security_groups ami]
+2025-02-21T15:22:57.726-0800 [DEBUG] command: asking for input: "var.ami"
+2025-02-21T15:26:02.049-0800 [WARN]  backend/local: Failed to request user input for variable "ami": interrupted
+2025-02-21T15:26:02.050-0800 [WARN]  backend/local: Failed to request user input for variable "security_groups": interrupted
+2025-02-21T15:26:02.050-0800 [WARN]  backend/local: Failed to request user input for variable "subnet_id": interrupted
+2025-02-21T15:26:02.050-0800 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2025-02-21T15:26:02.051-0800 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
