@@ -1,6 +1,6 @@
 terraform {
   backend "remote" {
-    organization = "<<ORGANIZATION NAME>>"
+    organization = "PIETWINS-training"
 
     workspaces {
       name = "variable_validation"
@@ -79,11 +79,16 @@ output "cost_code" {
   value = local.contact_info.cost_code
 }
 
-output "phone_number" {
-  sensitive = true
-  value = local.contact_info.phone_number
-}
+#output "phone_number" {
+#  sensitive = true
+#  value = local.contact_info.phone_number
+#}
 
 output "my_number" {
   value = local.my_number
+}
+
+output "phone_number" {
+  value     = var.phone_number
+  sensitive = true
 }

@@ -31,13 +31,18 @@ locals {
 locals {
   # Common tags to be assigned to all resources
   common_tags = {
-    Name      = local.server_name
-    Owner     = local.team
-    App       = local.application
-    Service   = local.service_name
-    AppTeam   = local.app_team
-    CreatedBy = local.createdby
+    Name      = lower(local.server_name)
+    Owner     = lower(local.team)
+    App       = lower(local.application)
+    Service   = lower(local.service_name)
+    AppTeam   = lower(local.app_team)
+    CreatedBy = lower(local.createdby)
   }
+}
+
+locals {
+  maximum = max(var.num_1, var.num_2, var.num_3)
+  minimum = min(var.num_1, var.num_2, var.num_3, 44, 20)
 }
 
 #Retrieve the list of AZs in the current AWS region
@@ -49,11 +54,10 @@ resource "aws_vpc" "vpc" {
   cidr_block = var.vpc_cidr
 
   tags = {
-    Name = var.vpc_name
-    #Environment = "demo_environment"
-    Environment = "demo-environment"
-    Terraform   = "true"
-    Region      = data.aws_region.current.name
+    Name = upper(var.vpc_name)
+    Environment = upper(var.environment)
+    Terraform   = upper("true")
+    Region      = upper(data.aws_region.current.name)
   }
 }
 
@@ -234,28 +238,52 @@ data "aws_ami" "ubuntu" {
 #  }
 #}
 
-resource "aws_s3_bucket" "my-new-S3-bucket" {
-  bucket = "tf-test-bucket-piet-${random_id.randomness.hex}"
 
-  tags = {
-    Name    = "My S3 Bucket"
-    Purpose = "Intro to Resource Blocks Lab"
-  }
+#resource "aws_s3_bucket" "my-new-S3-bucket" {
+#  bucket = "tf-test-bucket-piet-${random_id.randomness.hex}"
+#
+#  tags = {
+#    Name    = "My S3 Bucket"
+#    Purpose = "Intro to Resource Blocks Lab"
+#  }
+#}
+#
+#resource "aws_s3_bucket_ownership_controls" "my_new_bucket_ownership" {
+#  bucket = aws_s3_bucket.my-new-S3-bucket.id
+
+#  rule {
+#    object_ownership = "BucketOwnerPreferred"
+#  }
+#}
+#
+#resource "aws_s3_bucket_acl" "my_new_bucket_acl" {
+#  depends_on = [aws_s3_bucket_ownership_controls.my_new_bucket_ownership]
+#
+#  bucket = aws_s3_bucket.my-new-S3-bucket.id
+#  acl    = "private"
+#} 
+#
+
+data "aws_s3_bucket" "data_bucket" {
+  bucket = "datalookup-bucket-pch2"
 }
 
-resource "aws_s3_bucket_ownership_controls" "my_new_bucket_ownership" {
-  bucket = aws_s3_bucket.my-new-S3-bucket.id
-
-  rule {
-    object_ownership = "BucketOwnerPreferred"
-  }
-}
-
-resource "aws_s3_bucket_acl" "my_new_bucket_acl" {
-  depends_on = [aws_s3_bucket_ownership_controls.my_new_bucket_ownership]
-
-  bucket = aws_s3_bucket.my-new-S3-bucket.id
-  acl    = "private"
+resource "aws_iam_policy" "policy" {
+  name        = "data_bucket_policy"
+  description = "Allow access to my bucket"
+  policy = jsonencode({
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*"
+            ],
+            "Resource": "${data.aws_s3_bucket.data_bucket.arn}"
+        }
+    ]
+  })
 }
 
 resource "random_id" "randomness" {
@@ -278,10 +306,10 @@ resource "tls_private_key" "generated" {
   algorithm = "RSA"
 }
 
-resource "local_file" "private_key_pem" {
+/*resource "local_file" "private_key_pem" {
   content  = tls_private_key.generated.private_key_pem
   filename = "MyAWSKey.pem"
-}
+}*/
 
 resource "aws_key_pair" "generated" {
   key_name   = "MyAWSKey"
@@ -381,9 +409,9 @@ resource "aws_instance" "web_server" {
   }
 
   # Leave the first part of the block unchanged and create our `local-exec` provisioner
-  provisioner "local-exec" {
+  /*provisioner "local-exec" {
     command = "chmod 600 ${local_file.private_key_pem.filename}"
-  }
+  } */
 
   # provisioner "remote-exec" {
   #   inline = [
@@ -441,6 +469,14 @@ resource "aws_instance" "web_server" {
 #  ]
 #}
 #
+resource "aws_subnet" "list_subnet" {
+  for_each          = var.env
+  vpc_id            = aws_vpc.vpc.id
+  #cidr_block       = var.ip[var.environment]
+  cidr_block        = each.value.ip
+  #availability_zone = var.us-east-1-azs[0]
+  availability_zone = each.value.az
+}
 #output "public_ip" {
 #  value = module.server.public_ip
 #}
@@ -536,3 +572,15 @@ resource "aws_instance" "web_server" {
 #    Environment = "dev"
 #  }
 #}
+
+output "data-bucket-arn" {
+  value = data.aws_s3_bucket.data_bucket.arn
+}
+
+output "max_value" {
+  value = local.maximum
+}
+
+output "min_value" {
+  value = local.minimum
+}
